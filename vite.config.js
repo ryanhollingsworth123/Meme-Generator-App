@@ -10,5 +10,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/Meme-Generator",
+  base: "/Meme-Generator-App",
 })
