@@ -1,18 +1,83 @@
-# React + Vite
+# Meme Generator App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**A React + Vite meme generator that fetches random meme templates from the Imgflip API and lets you add custom top & bottom text.**  
+This project was built to practice handling side effects with `useEffect`, fetching data from an external API, and interactive UI updates.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo
 
-## React Compiler
+Try the app live here:  
+https://ryanhollingsworth123.github.io/Meme-Generator-App/
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## Project Overview
 
-## Expanding the ESLint configuration
+The Meme Generator App:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Fetches **random meme images** from the Imgflip API.
+- Lets users **input top and bottom text**.
+- Displays a **preview meme image** with the custom captions.
+- Demonstrates the use of **React hooks** (`useState`, `useEffect`) and **fetch requests** to external APIs.
+
+---
+
+## Tech Stack
+
+- **React** — UI & state management  
+- **Vite** — Fast dev build tooling  
+- **JavaScript (ES6+)** — Core language features  
+- **CSS** — Styling  
+- **npm** — Package management  
+- **Imgflip API** — Random meme templates source
+
+---
+
+## Project Structure
+
+Meme-Generator-App/
+├── public/ # Static files & HTML
+├── src/ # React source files
+│ ├── App.jsx # Main component & game logic
+│ ├── index.jsx # Entry point
+│ └── assets/ # Images or static assets
+├── .gitignore
+├── index.html
+├── package.json # Scripts & dependencies
+├── vite.config.js # Vite configuration
+└── README.md
+
+---
+
+## Installation & Local Setup
+
+Follow these steps to run the project locally:
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/ryanhollingsworth123/Meme-Generator-App.git
+Change into the project directory
+
+cd Meme-Generator-App
+Install the dependencies
+
+npm install
+Start the development server
+
+npm run dev
+Open in your browser
+
+http://localhost:5173/
+
+**How It Works**
+
+On load, the app fetches a list of meme templates from the Imgflip API.
+
+When the user clicks “Get new meme image”, the app selects a random meme template.
+
+Users type in Top Text and Bottom Text.
+
+The meme image updates in real time with the custom text overlay.
+
+This workflow demonstrates React state updates, side effects, and event handling.
